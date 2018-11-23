@@ -4644,7 +4644,7 @@
 					};
 					652F58781E106DF10012353C = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = N33TQXN8C7;
+						DevelopmentTeam = TX876ZZZNK;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -4653,7 +4653,7 @@
 						};
 					};
 					652F58B11E1071470012353C = {
-						DevelopmentTeam = N33TQXN8C7;
+						DevelopmentTeam = TX876ZZZNK;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -4665,8 +4665,8 @@
 					};
 					658237321D07FE6700B824F4 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = N33TQXN8C7;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = TX876ZZZNK;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -4675,12 +4675,13 @@
 					};
 					658FECF71E240B8F0013BCE3 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = TX876ZZZNK;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 659886481CF74DE9003ECD1C;
 					};
 					659886481CF74DE9003ECD1C = {
-						DevelopmentTeam = N33TQXN8C7;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = TX876ZZZNK;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -4691,22 +4692,22 @@
 						};
 					};
 					659886EC1CF83580003ECD1C = {
-						DevelopmentTeam = N33TQXN8C7;
+						DevelopmentTeam = TX876ZZZNK;
 					};
 					659887411CF83947003ECD1C = {
-						DevelopmentTeam = N33TQXN8C7;
+						DevelopmentTeam = TX876ZZZNK;
 					};
 					65B40D2A1BDE520500A9C595 = {
 						CreatedOnToolsVersion = 7.1;
 					};
 					65B621011D2D3D9E0047248F = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = N33TQXN8C7;
+						DevelopmentTeam = TX876ZZZNK;
 						TestTargetID = 659886481CF74DE9003ECD1C;
 					};
 					65C52B351B906105003AF42F = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = N33TQXN8C7;
+						DevelopmentTeam = TX876ZZZNK;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -4715,7 +4716,7 @@
 					};
 					65F398101B7B684700ABCD39 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = N33TQXN8C7;
+						DevelopmentTeam = TX876ZZZNK;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -4734,7 +4735,7 @@
 					};
 					65F3985D1B7B6A5300ABCD39 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = N33TQXN8C7;
+						DevelopmentTeam = TX876ZZZNK;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -4743,7 +4744,7 @@
 					};
 					D096D93F1F28C0D70081004D = {
 						CreatedOnToolsVersion = 9.0;
-						DevelopmentTeam = N33TQXN8C7;
+						DevelopmentTeam = TX876ZZZNK;
 						SystemCapabilities = {
 							com.apple.NetworkExtensions = {
 								enabled = 1;
@@ -6348,7 +6349,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_ENTITLEMENTS = AdguardLogSender/AdguardLogSender.entitlements;
-				DEVELOPMENT_TEAM = N33TQXN8C7;
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -6356,7 +6357,7 @@
 				INFOPLIST_FILE = AdguardLogSender/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adguard.AdguardLogSender;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spring.AdguardLogSender;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -6370,11 +6371,11 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_ENTITLEMENTS = AdguardLogSender/AdguardLogSender.entitlements;
-				DEVELOPMENT_TEAM = N33TQXN8C7;
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				INFOPLIST_FILE = AdguardLogSender/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adguard.AdguardLogSender;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spring.AdguardLogSender;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -6388,7 +6389,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_ENTITLEMENTS = AdguardLogSender/AdguardLogSenderPro.entitlements;
-				DEVELOPMENT_TEAM = N33TQXN8C7;
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -6396,7 +6397,7 @@
 				INFOPLIST_FILE = "AdguardLogSender copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adguard.AdguardLogSenderPro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spring.AdguardLogSenderPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -6410,11 +6411,11 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_ENTITLEMENTS = AdguardLogSender/AdguardLogSenderPro.entitlements;
-				DEVELOPMENT_TEAM = N33TQXN8C7;
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				INFOPLIST_FILE = "AdguardLogSender copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adguard.AdguardLogSenderPro;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spring.AdguardLogSenderPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -6452,7 +6453,8 @@
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/AdguardPro/tunnel/tunnel.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = N33TQXN8C7;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -6461,10 +6463,10 @@
 				INFOPLIST_FILE = "$(SRCROOT)/AdguardPro/tunnel/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../Libs/vendors/DnsCrypt\"";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(ADGUARD_TUNNEL_BUNDLE_ID)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spring.AdguardPro.tunnel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6adfa0d3-1dd7-4997-ad7a-bc6e11f4efe6";
-				PROVISIONING_PROFILE_SPECIFIER = "NE com.adguard.AdguardPro.tunnel";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$SRCROOT/../Libs \"$(SRCROOT)/../Libs/vendors/DnsCrypt/src/include\" \"$(SRCROOT)/../Libs/vendors/DnsCrypt/src\" \"$(SRCROOT)/../Libs/vendors/DnsCrypt/src/libevent-modified/include\" \"$(SRCROOT)/../Libs/vendors/DnsCrypt/src/libsodium/include/sodium\" \"$(SRCROOT)/../Libs/vendors/DnsCrypt/src/libsodium/include\"";
 			};
@@ -6480,15 +6482,16 @@
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/AdguardPro/tunnel/tunnel.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = N33TQXN8C7;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "APP_EXTENSION=1";
 				INFOPLIST_FILE = "$(SRCROOT)/AdguardPro/tunnel/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../Libs/vendors/DnsCrypt\"";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(ADGUARD_TUNNEL_BUNDLE_ID)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spring.AdguardPro.tunnel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "58bf3afa-fb77-497c-b524-0683f63a7800";
-				PROVISIONING_PROFILE_SPECIFIER = "NE com.adguard.AdguardPro.tunnel";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$SRCROOT/../Libs \"$(SRCROOT)/../Libs/vendors/DnsCrypt/src/include\" \"$(SRCROOT)/../Libs/vendors/DnsCrypt/src\" \"$(SRCROOT)/../Libs/vendors/DnsCrypt/src/libevent-modified/include\" \"$(SRCROOT)/../Libs/vendors/DnsCrypt/src/libsodium/include/sodium\" \"$(SRCROOT)/../Libs/vendors/DnsCrypt/src/libsodium/include\"";
 			};
@@ -6500,7 +6503,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -6522,7 +6525,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				INFOPLIST_FILE = AdguardProUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -6538,19 +6541,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6598877B1CF84766003ECD1C /* Adguard-Pro-Config.xcconfig */;
 			buildSettings = {
+				ADGUARD_BUNDLE_ID = com.spring.AdguardPro;
 				ASSETCATALOG_COMPILER_APPICON_NAME = ProAppIcon;
 				CODE_SIGN_ENTITLEMENTS = AdguardPro/AdguardPro.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = N33TQXN8C7;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				HEADER_SEARCH_PATHS = $inherited;
 				INFOPLIST_FILE = "$(SRCROOT)/AdguardPro/AdguardPro.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = $inherited;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(ADGUARD_BUNDLE_ID)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a31886d7-495d-4685-9677-f316ed810e72";
-				PROVISIONING_PROFILE_SPECIFIER = "NE com.adguard.AdguardPro";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = $inherited;
 			};
 			name = Debug;
@@ -6559,19 +6564,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6598877B1CF84766003ECD1C /* Adguard-Pro-Config.xcconfig */;
 			buildSettings = {
+				ADGUARD_BUNDLE_ID = com.spring.AdguardPro;
 				ASSETCATALOG_COMPILER_APPICON_NAME = ProAppIcon;
 				CODE_SIGN_ENTITLEMENTS = AdguardPro/AdguardPro.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = N33TQXN8C7;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				HEADER_SEARCH_PATHS = $inherited;
 				INFOPLIST_FILE = "$(SRCROOT)/AdguardPro/AdguardPro.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = $inherited;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(ADGUARD_BUNDLE_ID)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1a90a74b-f871-452e-b8b6-caad3cdf04bb";
-				PROVISIONING_PROFILE_SPECIFIER = "NE com.adguard.AdguardPro";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = $inherited;
 			};
 			name = Release;
@@ -6580,14 +6586,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6598877B1CF84766003ECD1C /* Adguard-Pro-Config.xcconfig */;
 			buildSettings = {
+				ADGUARD_BUNDLE_ID = com.spring.AdguardPro;
+				ADGUARD_SHARED_RESOURCES_GROUP = group.com.spring.AdguardPro;
+				AE_SHARED_SUBSCRIPTIOSN_GROUP = group.com.spring.AdguardPro.subscriptions;
 				ASSETCATALOG_COMPILER_APPICON_NAME = ActionIcon;
 				CODE_SIGN_ENTITLEMENTS = AdguardPro/ProActionExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "APP_EXTENSION=1";
 				INFOPLIST_FILE = "$(SRCROOT)/AdguardPro/ProActionExtension.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(ADGUARD_BUNDLE_ID).ActionExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spring.AdguardPro.ActionExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -6597,14 +6607,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6598877B1CF84766003ECD1C /* Adguard-Pro-Config.xcconfig */;
 			buildSettings = {
+				ADGUARD_BUNDLE_ID = com.spring.AdguardPro;
+				ADGUARD_SHARED_RESOURCES_GROUP = group.com.spring.AdguardPro;
+				AE_SHARED_SUBSCRIPTIOSN_GROUP = group.com.spring.AdguardPro.subscriptions;
 				ASSETCATALOG_COMPILER_APPICON_NAME = ActionIcon;
 				CODE_SIGN_ENTITLEMENTS = AdguardPro/ProActionExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "APP_EXTENSION=1";
 				INFOPLIST_FILE = "$(SRCROOT)/AdguardPro/ProActionExtension.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(ADGUARD_BUNDLE_ID).ActionExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spring.AdguardPro.ActionExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -6618,9 +6632,10 @@
 				CODE_SIGN_ENTITLEMENTS = AdguardPro/ProBlockingExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				INFOPLIST_FILE = "$(SRCROOT)/AdguardPro/ProBlockingExtension.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(ADGUARD_EXTENSION_BUNDLE_ID)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spring.AdguardPro.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -6634,9 +6649,10 @@
 				CODE_SIGN_ENTITLEMENTS = AdguardPro/ProBlockingExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				INFOPLIST_FILE = "$(SRCROOT)/AdguardPro/ProBlockingExtension.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(ADGUARD_EXTENSION_BUNDLE_ID)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spring.AdguardPro.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -6670,7 +6686,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
-				DEVELOPMENT_TEAM = N33TQXN8C7;
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -6689,7 +6705,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
-				DEVELOPMENT_TEAM = N33TQXN8C7;
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				INFOPLIST_FILE = AdguardProTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -6706,6 +6722,7 @@
 				CODE_SIGN_ENTITLEMENTS = ActionExtension/ActionExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "APP_EXTENSION=1";
 				INFOPLIST_FILE = ActionExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -6723,6 +6740,7 @@
 				CODE_SIGN_ENTITLEMENTS = ActionExtension/ActionExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "APP_EXTENSION=1";
 				INFOPLIST_FILE = ActionExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -6856,6 +6874,7 @@
 				CODE_SIGN_ENTITLEMENTS = Adguard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				HEADER_SEARCH_PATHS = $inherited;
 				INFOPLIST_FILE = "$(SRCROOT)/AdguardApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -6874,6 +6893,7 @@
 				CODE_SIGN_ENTITLEMENTS = Adguard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				HEADER_SEARCH_PATHS = $inherited;
 				INFOPLIST_FILE = "$(SRCROOT)/AdguardApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -6916,6 +6936,7 @@
 				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				INFOPLIST_FILE = "$(SRCROOT)/Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(ADGUARD_EXTENSION_BUNDLE_ID)";
@@ -6932,6 +6953,7 @@
 				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				INFOPLIST_FILE = "$(SRCROOT)/Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(ADGUARD_EXTENSION_BUNDLE_ID)";
@@ -6957,7 +6979,7 @@
 				CODE_SIGN_ENTITLEMENTS = TodayExtension/TodayExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = N33TQXN8C7;
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -6966,7 +6988,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/TodayExtension/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adguard.AdguardPro.AdguardWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spring.AdguardPro.AdguardWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -6989,12 +7011,12 @@
 				CODE_SIGN_ENTITLEMENTS = TodayExtension/TodayExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = N33TQXN8C7;
+				DEVELOPMENT_TEAM = TX876ZZZNK;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "$(SRCROOT)/TodayExtension/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adguard.AdguardPro.AdguardWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spring.AdguardPro.AdguardWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

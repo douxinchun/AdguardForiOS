@@ -35,10 +35,10 @@ ACTION_JAVASCRIPT_ASSISTANT_REMOTE = https:${SLASH}/adguardteam.github.io/Adguar
 DNS_CRYPT_RESOLVERS_REMOTE = https:${SLASH}/download.dnscrypt.info/dnscrypt-resolvers/v1/dnscrypt-resolvers.csv
 
 // Main App bundle identifier
-ADGUARD_BUNDLE_ID = com.adguard.AdguardExtension
+ADGUARD_BUNDLE_ID = com.spring.AdguardExtension
 // Blocking extension bundle identifier
 ADGUARD_EXTENSION_BUNDLE_ID = $(ADGUARD_BUNDLE_ID).extension
 // Downloads session for filter updates identifier
 ADGUARD_FILTER_UPDATES_ID = $(ADGUARD_BUNDLE_ID).filterUpdatesSession
 // Group for shared resources
-ADGUARD_SHARED_RESOURCES_GROUP = group.com.adguard.AdguardExtension
+ADGUARD_SHARED_RESOURCES_GROUP = group.com.spring.AdguardExtension

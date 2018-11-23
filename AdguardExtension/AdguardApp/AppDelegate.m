@@ -706,7 +706,6 @@ typedef void (^AEDownloadsCompletionBlock)();
 }
 
 - (UIStoryboard *)mainStoryborad{
-    
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *storyboardName = [bundle objectForInfoDictionaryKey:@"UIMainStoryboardFile"];
     return [UIStoryboard storyboardWithName:storyboardName bundle:bundle];
