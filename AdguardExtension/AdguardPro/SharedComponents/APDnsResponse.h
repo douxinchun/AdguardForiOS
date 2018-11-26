@@ -48,5 +48,6 @@
  @return Returns object or nil if resource type is not permitted.
  */
 + (APDnsResponse *)blockedResponseWithName:(NSString *)name type:(APDnsResourceType *)type ip:(NSString*)ip;
++ (APDnsResponse *)responseWithName:(NSString *)name type:(APDnsResourceType *)type ip:(NSString*)ip;
 
 @end

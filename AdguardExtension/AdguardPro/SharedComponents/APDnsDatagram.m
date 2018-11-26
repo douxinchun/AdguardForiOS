@@ -133,6 +133,31 @@
     return NO;
 }
 
+- (BOOL)convertToResponseWithIP:(NSString *)ip {
+    if (self.isRequest == NO) {
+        return NO;
+    }
+    
+    NSMutableArray *responses = [NSMutableArray array];
+    
+    for (APDnsRequest *request in self.requests) {
+        APDnsResponse *response = [APDnsResponse responseWithName:request.name
+                                                             type:request.type ip:ip];
+        if (response) {
+            [responses addObject:response];
+        }
+    }
+    
+    if (responses.count) {
+        _responses = responses;
+        _isRequest = NO;
+        _isResponse = YES;
+        return YES;
+    }
+    
+    return NO;
+}
+
 /////////////////////////////////////////////////////////////////////
 #pragma mark Private Methods
 

@@ -39,7 +39,7 @@
 - (void)testUdpIpv6PacketBuild {
     
     APUDPPacket *udpIpPacket = [[APUDPPacket alloc] initWithAF:@(AF_INET6)];
-    
+
     udpIpPacket.srcAddress = @"::1";
     udpIpPacket.srcPort = @"80";
     udpIpPacket.dstAddress = @"::2";
@@ -47,11 +47,11 @@
 
     NSData *payload = [NSData dataWithBytes:"\01\01\01\01" length:4];
     udpIpPacket.payload = payload;
-    
+
     XCTAssertNotNil(udpIpPacket.packet);
     XCTAssertEqual(payload.length, udpIpPacket.payload.length);
 
-    
+
     NSString *resultBytes = @"96, 0, 0, 0, 0, 12, 17, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 80, 0, 80, 0, 12, -3, 49, 1, 1, 1, 1";
     NSData *packet = [self packetFromDumpString:resultBytes];
 

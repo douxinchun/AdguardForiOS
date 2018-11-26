@@ -41,6 +41,7 @@
  @return Returns YES on success
  */
 - (BOOL)convertToBlockingResponseWithIP: (NSString*)ip;
+- (BOOL)convertToResponseWithIP:(NSString *)ip;
 
 - (NSData *)generatePayload;
 

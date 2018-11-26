@@ -29,6 +29,8 @@
 #import "APDnsServerObject.h"
 #import "APVPNManager.h"
 #import <QuartzCore/CAAnimation.h>
+#import "APDnsResourceType.h"
+#import "DNSOverHttps.h"
 
 #define MAX_DATAGRAMS_RECEIVED                      10
 #define TTL_SESSION                                 3 //seconds
@@ -65,6 +67,8 @@
     
     double startSendingTime;
     BOOL tracker;
+    
+    DNSOverHttps *_shareDNSOverHttpsServer;
 }
 
 /////////////////////////////////////////////////////////////////////
@@ -78,7 +82,7 @@
 
     self = [super init];
     if (self) {
-        
+        _shareDNSOverHttpsServer = [DNSOverHttps instance];
         
         _dnsLoggingEnabled = NO;
         _dnsRecords = [NSMutableArray new];
@@ -307,13 +311,27 @@
             locLogError(USE_STRONG(self), @"Error when reading data for \"%@\":%@", USE_STRONG(self), error.description);
             return;
         }
-        
+//        NSMutableArray<NSData *> *newDatagrams = [[NSMutableArray alloc] initWithCapacity:10];
+//        for (NSData *packet in datagrams) {
+//            APDnsDatagram *dns = [[APDnsDatagram alloc] initWithData:packet];
+//            if (dns.isResponse) {
+////                [dns changeResponseIPTo:@"47.99.55.152"];
+//                [dns changeResponseIPTo:@"111.13.100.91"];
+//                if (dns.responses.count > 0) {
+//                    NSLog(@"-----------changed dns datagram response:%@  %@",dns.responses[0].name, dns.responses[0].stringValue);
+//                }
+//            }
+//            [newDatagrams addObject:[dns generatePayload]];
+//        }
+//        datagrams = newDatagrams;
         dispatch_sync(USE_STRONG(self)->_workingQueue, ^{
             
             ASSIGN_STRONG(session);
             ASSIGN_STRONG(self);
             [USE_STRONG(self) settingDnsRecordsForIncomingPackets:datagrams session:USE_STRONG(session)];
         });
+        
+      
         
         // reset timeout timer
         [USE_STRONG(self)->_timeoutExecution executeOnceAfterCalm];
@@ -491,6 +509,8 @@
         NSArray *specialPackets = [self processingOutgoingPackets:packets];
         NSArray *whitelistPackets = specialPackets[0];
         NSArray *blacklistDatagrams = specialPackets[1];
+        NSArray *dNSADatagrams = specialPackets[2];
+        NSArray *leftPackets = specialPackets[3];
         
         if (_dnsLoggingEnabled) {
             [_saveLogExecution executeOnceForInterval];
@@ -534,8 +554,11 @@
         };
         
         if (blacklistDatagrams.count) {
-        
             [self sendBackBlacklistDnsDatagrams:blacklistDatagrams];
+        }
+        
+        if (dNSADatagrams.count) {
+            [self sendBackDnsTypeADatagrams:dNSADatagrams];
         }
         
         if (whitelistPackets.count) {
@@ -560,9 +583,10 @@
                 [USE_STRONG(self).udpSession writeMultipleDatagrams:packets completionHandler:completionForMainWrite];
             }];
         }
-        else
+        if (leftPackets.count) {
             // write packets to main UDP session
             [self.udpSession writeMultipleDatagrams:packets completionHandler:completionForMainWrite];
+        }
     }
 }
 
@@ -597,10 +621,14 @@
     
     NSMutableArray *whitelistPackets = [NSMutableArray array];
     NSMutableArray *blacklistDatagrams = [NSMutableArray array];
+    NSMutableArray *dnsTypeADatagrams = [NSMutableArray array];
+    NSMutableArray *leftPackets = [NSMutableArray array];
     
     @autoreleasepool {
         
         NSMutableArray *blacklistPackets = [NSMutableArray array];
+        NSMutableArray *dnsTypeAPackets = [NSMutableArray array];
+        
         for (NSData *packet in packets) {
             
             APDnsDatagram *datagram = [[APDnsDatagram alloc] initWithData:packet];
@@ -616,6 +644,7 @@
                 
                 //Check that this is request to domain from whitelist or blacklist.
                 NSString *name = [datagram.requests[0] name];
+                APDnsResourceType *type = datagram.requests[0].type;
                 NSString *ip;
                 NSString *subscriptionUUID;
                 
@@ -643,8 +672,12 @@
                         
                         [blacklistDatagrams addObject: ip ? @[datagram, ip] : @[datagram]];
                         [blacklistPackets addObject:packet];
+                    } else if (type.intValue == APDnsResourceType.aType.intValue) {
+                        [dnsTypeADatagrams addObject:@[datagram]];
+                        [dnsTypeAPackets addObject:packet];
                     }
                     
+
                     tracker = [self.delegate isTrackerslistDomain:name];
                 }
                 
@@ -659,8 +692,13 @@
         if (blacklistPackets.count) {
             [packets removeObjectsInArray:blacklistPackets];
         }
+        if (dnsTypeAPackets) {
+            [packets removeObjectsInArray:dnsTypeAPackets];
+        }
+        
+        leftPackets = [packets mutableCopy];
     }
-    return @[whitelistPackets, blacklistDatagrams];
+    return @[whitelistPackets, blacklistDatagrams, dnsTypeADatagrams, leftPackets];
 }
 
 - (void)sendBackBlacklistDnsDatagrams:(NSArray <NSArray *> *)dnsDatagrams {
@@ -705,6 +743,50 @@
     //write data from remote endpoint into local TUN interface
     [self.delegate.provider.packetFlow writePackets:ipPackets withProtocols:protocols];
 
+}
+
+- (void)sendBackDnsTypeADatagrams:(NSArray <NSArray *> *)dnsDatagrams {
+    BOOL logUpdated = NO;
+    NSMutableArray *datagrams = [NSMutableArray arrayWithCapacity:dnsDatagrams.count];
+    for (NSArray *item in dnsDatagrams) {
+        
+        APDnsDatagram* datagram = item[0];
+        NSString *name = datagram.requests[0].name;
+        NSString* ip = [_shareDNSOverHttpsServer requestWithName:name];
+//        item.count > 1 ? item[1] : nil;
+//        ip = @"47.99.55.152";
+        NSLog(@"---ip: %@", ip);
+        if ([datagram convertToResponseWithIP:ip]) {
+            
+            [self settingDnsRecordForIncomingDnsDatagram:datagram session:_udpSession];
+            
+            logUpdated = _dnsLoggingEnabled;
+            
+            NSData *datagramPayload = [datagram generatePayload];
+            if (datagramPayload) {
+                [datagrams addObject:datagramPayload];
+            }
+        }
+    }
+    
+    if (datagrams.count == 0) {
+        return;
+    }
+    
+    if (logUpdated) {
+        [_saveLogExecution executeOnceForInterval];
+    }
+    
+    NSMutableArray *protocols = [NSMutableArray new];
+    
+    NSArray *ipPackets = [self ipPacketsWithDatagrams:datagrams];
+    for (int i = 0; i < ipPackets.count; i++) {
+        
+        [protocols addObject:_basePacket.aFamily];
+    }
+    
+    //write data from remote endpoint into local TUN interface
+    [self.delegate.provider.packetFlow writePackets:ipPackets withProtocols:protocols];
 }
 
 - (void)gettingDnsRecordForOutgoingDnsDatagram:(APDnsDatagram *)datagram whitelist:(BOOL)whitelist blacklist:(BOOL)blacklist subscriptionUUID:(NSString*) uuid {
@@ -777,7 +859,6 @@
         if(!datagram) {
             DDLogError(@"(APTUdpProxySession) Incoming datagram parsing error. Base packet dst address: %@ port: %@", _basePacket.dstAddress, _basePacket.dstPort);
         }
-        
         [self settingDnsRecordForIncomingDnsDatagram:datagram session:session];
     }
     
